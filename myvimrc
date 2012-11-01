@@ -38,6 +38,8 @@ set tabstop=4
 set cc=80
 set shiftwidth=4
 set history=200		" keep 200 lines of command line history
+set laststatus=2	" Show filename on the bottom
+set statusline=%4*%<\%m%<[%f\%r%h%w]\ [%{&ff},%{&fileencoding},%Y]%=\[Position=%l,%v,%p%%]
 
 " Ignore the case when searching...
 set ic
@@ -108,7 +110,6 @@ endif
 
 
 if has("cscope")
-	set csprg=/tools/sw/calix/scripts/c7/cscope
 	set csto=0
 	set cst
 	set nocsverb
@@ -156,8 +157,12 @@ endif
 
 nmap <silent> <F12> :TlistToggle<CR>
 
+colorscheme darkblue
 "hl-CursorLine guibg=blue guifg=red 
-set cursorline
+set cursorline 
+set cursorcolumn
+hi CursorLine term=bold cterm=bold guibg=grey40
+hi CursorColumn term=bold cterm=bold guibg=grey40 
 
 set tags=tags
 
@@ -171,8 +176,8 @@ func! FuncColorElflord()
 	colorscheme elflord
 endfunc
 
-colorscheme darkblue
 "func! FuncColorDarkblue()
+"colorscheme darkblue
 "endfunc
 
 func! FuncColorKoehler()
@@ -189,5 +194,4 @@ endfunc
 
 " Chinese support
 set fileencoding=utf-8
-set fileencoding=gbk
 set termencoding=utf-8
