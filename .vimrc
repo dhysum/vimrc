@@ -29,6 +29,7 @@ set backspace=indent,eol,start
 
 filetype plugin on
 filetype indent on
+set completeopt=longest,menu
 
 set nu
 set ai
@@ -48,8 +49,6 @@ set smartindent
 set wrap
 set noerrorbells
 set novisualbell
-set nocompatible	" Don't be compatible to vi
-
 set statusline=%4*%<\%m%<[%f\%r%h%w]\ [%{&ff},%{&fileencoding},%Y]%=\[Position=%l,%v,%p%%]
 
 " Ignore the case when searching...
