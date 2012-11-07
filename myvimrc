@@ -27,6 +27,9 @@ set backspace=indent,eol,start
 "  set backup		" keep a backup file
 "endif
 
+filetype plugin on
+filetype indent on
+
 set nu
 set ai
 set showmatch
@@ -39,6 +42,14 @@ set cc=80
 set shiftwidth=4
 set history=200		" keep 200 lines of command line history
 set laststatus=2	" Show filename on the bottom
+set noswapfile
+set nowb
+set smartindent
+set wrap
+set noerrorbells
+set novisualbell
+set nocompatible	" Don't be compatible to vi
+
 set statusline=%4*%<\%m%<[%f\%r%h%w]\ [%{&ff},%{&fileencoding},%Y]%=\[Position=%l,%v,%p%%]
 
 " Ignore the case when searching...
@@ -95,8 +106,6 @@ if has("autocmd")
   augroup END
 
 else
-
-set autoindent		" always set autoindenting on
 
 endif " has("autocmd")
 
@@ -195,3 +204,4 @@ endfunc
 " Chinese support
 set fileencoding=utf-8
 set termencoding=utf-8
+
