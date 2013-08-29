@@ -166,14 +166,6 @@ endif
 
 nmap <silent> <F12> :TlistToggle<CR>
 
-colorscheme darkblue
-"hl-CursorLine guibg=blue guifg=red 
-"set cursor
-set cursorline 
-set cursorcolumn
-hi CursorLine term=bold cterm=bold guibg=grey40 
-hi CursorColumn term=bold cterm=bold guibg=grey40 ctermbg=black ctermfg=white
-
 set tags=tags
 
 "map <C-c> : call FuncColorElflord() <CR>
@@ -202,7 +194,15 @@ func! FuncColorTorte()
 	colorscheme torte
 endfunc
 
+colorscheme darkblue
+
 " Chinese support
 set fileencoding=utf-8
 set termencoding=utf-8
 
+"hl-CursorLine guibg=blue guifg=red 
+"set cursor
+set cursorline 
+set cursorcolumn
+hi CursorLine term=bold cterm=bold guibg=grey40 
+hi CursorColumn term=bold cterm=bold guibg=grey40 ctermbg=black ctermfg=white
